@@ -67,7 +67,6 @@
 
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import sideImg from "../../assest/Featured_Image_754c864e70.webp";
 
 const stats = [
@@ -103,14 +102,17 @@ const About = () => {
 
   return (
     <section ref={sectionRef} className="bg-white overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-16 py-16 lg:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-16 py-16">
+        <div className="flex md:flex-row flex-col gap-14 items-center">
           <div className="animate-fade-left">
-            <h2 className="text-4xl sm:text-5xl font-serif text-[#BF843D] mb-6">
+            <h2 className="text-4xl sm:text-5xl font-serif text-[#BF843D] mb-3">
               About Panache
             </h2>
 
-            <p className="text-gray-700 text-sm leading-7 max-w-xl mb-14">
+            <p
+              className="text-gray-700 text-[13px] max-w-5xl mb-6"
+              style={{ letterSpacing: "0.5px" }}
+            >
               A New Face Of Luxury In Pradhikaran Is Here To Change History. An
               Ultra-Luxurious Project Of 3 & 4 BHK Sky Suites, This Glamorous
               Living Will Let You Experience The Grandeur Like Never Before.
@@ -122,7 +124,7 @@ const About = () => {
             </p>
 
             {/* STATS */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-12 gap-x-10 md:text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-10 md:text-center">
               {stats.map((stat, index) => (
                 <div
                   key={index}
@@ -130,7 +132,6 @@ const About = () => {
                   style={{ animationDelay: `${index * 120}ms` }}
                 >
                   <span className="absolute left-0 top-0 h-full w-[2px] bg-[#BF843D]" />
-
                   <CountUp
                     value={stat.number}
                     suffix={stat.suffix}
@@ -146,12 +147,12 @@ const About = () => {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="relative h-[420px] sm:h-[520px] lg:h-[640px] animate-fade-right">
-            <Image
-              src={sideImg}
+          <div className="w-[100%] md:w-[50%] relative sm:h-[auto] lg:h-[auto] animate-fade-right">
+            <img
+              src={sideImg.src}
               alt="Panache Luxury Building"
-              fill
-              priority
+              // fill
+              // priority
               className="object-cover rounded-sm shadow-xl"
             />
           </div>
