@@ -105,13 +105,13 @@ const About = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-16 py-16">
         <div className="flex md:flex-row flex-col gap-14 items-center">
           <div className="animate-fade-left">
-            <h2 className="text-4xl sm:text-5xl font-serif text-[#BF843D] mb-3">
+            <h2 className="text-[49px] text-[#BF843D] mb-3" style={{ fontWeight: "500" }}>
               About Panache
             </h2>
 
             <p
-              className="text-gray-700 text-[13px] max-w-5xl mb-6"
-              style={{ letterSpacing: "0.5px" }}
+              className="text-gray-700 text-[13px] max-w-6xl mb-6"
+              style={{ letterSpacing: "0.5px", lineHeight: "18px", fontWeight: "400" }}
             >
               A New Face Of Luxury In Pradhikaran Is Here To Change History. An
               Ultra-Luxurious Project Of 3 & 4 BHK Sky Suites, This Glamorous
@@ -124,7 +124,7 @@ const About = () => {
             </p>
 
             {/* STATS */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-10 md:text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-5 gap-x-10 md:text-center">
               {stats.map((stat, index) => (
                 <div
                   key={index}
@@ -237,7 +237,7 @@ const CountUp = ({
   }, [start, value]);
 
   return (
-    <h3 className="text-4xl sm:text-5xl font-serif text-amber-800">
+    <h3 className="text-[64px] font-serif text-[#BF843D]">
       {count}
       {suffix}
     </h3>

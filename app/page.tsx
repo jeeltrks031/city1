@@ -7,6 +7,7 @@ import Hero from "@/src/home/HeroPage/Hero";
 import Location from "@/src/home/Location/Location";
 // import OverView from "@/src/home/overview/OverView";
 import ProjectConfiguration from "@/src/home/ProjectConfiguration/ProjectConfiguration";
+import QrCode from "@/src/home/QrCode/QrCode";
 // import Image from "next/image";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <Amenities />
       <Gallery />
       <Location />
+      <QrCode />
       <Footer />
     </div>
   );

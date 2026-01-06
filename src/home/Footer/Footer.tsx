@@ -1,67 +1,4 @@
-// "use client";
-
-// import React from "react";
-// import { motion } from "framer-motion";
-
-// const Footer = () => {
-//   return (
-//     <footer className="bg-white relative">
-//       <motion.div
-//         initial={{ opacity: 0 }}
-//         whileInView={{ opacity: 1 }}
-//         transition={{ duration: 0.6 }}
-//         viewport={{ once: true }}
-//         className="max-w-6xl mx-auto text-center"
-//       >
-//         <div className="flex justify-center mb-6">
-//           <img
-//             src="https://kalpataruelitus.ondevwebs.com/assets/images/rera.jpeg"
-//             alt="RERA QR"
-//             className="w-28 h-28 object-contain"
-//           />
-//         </div>
-
-//         <p className="text-gray-500 text-sm mb-6 font-medium">
-//           RERA Registration Number :{" "}
-//           <span className="font-semibold text-gray-700">P51800023840</span>
-//         </p>
-
-//         <div className="text-sm font-medium text-black mb-6">
-//           Terms Of Use | Privacy Policy | Disclaimer
-//         </div>
-
-//         <p
-//           className="text-gray-400 text-[15px] leading-7 max-w-5xl mx-auto mb-10"
-//           style={{ letterSpacing: "1px" }}
-//         >
-//           Disclaimer : Thank you for visiting our website. We are currently in
-//           the process of revising our website in accordance under RERA. We are
-//           in the process of updating the website. The content provided on this
-//           website is for informational purposes only, and should not be
-//           construed as legal advice on any subject matter. Without any
-//           limitation or qualification, users hereby agree with this Disclaimer,
-//           when accessing or using this website.
-//         </p>
-
-//         <div className="text-gray-400 text-sm space-y-1">
-//           <p>COPYRIGHTS © 2024</p>
-//           <p className="uppercase tracking-wide">Kalpataru Elitus</p>
-//         </div>
-
-//         <div className="mt-6 text-sm text-gray-400 mb-6">
-//           Developed by{" "}
-//           <span className="text-black font-medium">Shashwat Technologies.</span>
-//         </div>
-//       </motion.div>
-//     </footer>
-//   );
-// };
-
-// export default Footer;
-
-
 "use client";
-
 import { motion } from "framer-motion";
 
 const Footer = () => {
@@ -77,22 +14,25 @@ const Footer = () => {
         >
           <input
             placeholder="Full Name"
-            className="bg-black text-white px-4 py-4 outline-none"
+            className="bg-black text-[17px] text-white px-4 py-4 outline-none"
           />
           <input
             placeholder="Mobile Number"
-            className="bg-black text-white px-4 py-4 outline-none"
+            className="bg-black text-[17px] text-white px-4 py-4 outline-none"
           />
           <input
             placeholder="Email Address"
-            className="bg-black text-white px-4 py-4 outline-none"
+            className="bg-black text-[17px] text-white px-4 py-4 outline-none"
           />
-          <select className="bg-black cursor-pointer text-white px-4 py-4 outline-none">
+          <select className="bg-black cursor-pointer text-[17px] text-white px-4 py-4 outline-none">
             <option>Select a Project</option>
             <option>City One</option>
             <option>City Two</option>
           </select>
-          <button className="bg-[#c58a3d] text-white py-4 font-medium hover:bg-[#b07835] transition">
+          <button
+            className="bg-[#c58a3d] text-[16px] text-white py-4 font-medium hover:bg-[#b07835] transition"
+            style={{ fontWeight: "700" }}
+          >
             Submit
           </button>
         </motion.div>
@@ -176,7 +116,7 @@ const FooterColumn = ({
         {items.map((item, index) => (
           <li
             key={index}
-            className="hover:text-[#c58a3d] cursor-pointer transition"
+            className="hover:text-[#c58a3d] text-[15px] cursor-pointer transition"
           >
             {item}
           </li>

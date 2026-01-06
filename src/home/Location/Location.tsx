@@ -72,7 +72,8 @@ const Location = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-4xl font-serif text-[#BF843D] mb-10"
+          className="text-[49px] text-[#BF843D] mb-10"
+          style={{ fontWeight: "400" }}
         >
           Location Advantages
         </motion.h2>
@@ -95,7 +96,8 @@ const Location = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="order-1 lg:order-2"
           >
-            <h3 className="text-4xl md:text-5xl font-serif text-gray-900 mb-6">
+            <h3 className="text-[40px] font-serif text-gray-900 mb-3"
+              style={{ fontWeight: "400", lineHeight: "55px" }}>
               Connectivity
             </h3>
 
@@ -111,10 +113,10 @@ const Location = () => {
                 >
                   <button
                     onClick={() => setActive(active === index ? -1 : index)}
-                    className={`w-full cursor-pointer flex justify-between items-center py-2 text-left transition ${active === index ? "px-3" : "px-2"
+                    className={`w-full cursor-pointer flex justify-between items-center py-2 text-left transition ${active === index ? "" : ""
                       }`}
                   >
-                    <span className="text-[16px] text-gray-800">
+                    <span className="text-[21px] text-[#333]" style={{ fontWeight: "400", lineHeight: "31px" }}>
                       {section.title}
                     </span>
                     <ChevronDown
@@ -124,7 +126,7 @@ const Location = () => {
                   </button>
 
                   <div
-                    className={`overflow-hidden transition-all duration-300 ${active === index ? " py-3 px-5" : "max-h-0"
+                    className={`overflow-hidden transition-all duration-300 ${active === index ? "py-3 px-5" : "max-h-0"
                       }`}
                   >
                     {section.items.map((item, i) => (
@@ -134,9 +136,9 @@ const Location = () => {
                       >
                         <div className="flex items-center gap-2">
                           <MapPin size={14} />
-                          <span className="text-[15px]"> {item.name}</span>
+                          <span className="text-[17px]" style={{ fontWeight: "400" }}> {item.name}</span>
                         </div>
-                        <span>{item.distance}</span>
+                        <span className="text-[17px]" style={{ fontWeight: "400" }}>{item.distance}</span>
                       </div>
                     ))}
                   </div>

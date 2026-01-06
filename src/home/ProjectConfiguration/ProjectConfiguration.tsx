@@ -143,7 +143,8 @@ const ProjectConfiguration = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center text-3xl sm:text-4xl font-serif text-[#BF843D] mb-16"
+          className="text-center text-[49px] text-[#BF843D] mb-16"
+          style={{ fontWeight: "400" }}
         >
           Project Configuration
         </motion.h2>
@@ -173,7 +174,7 @@ const ProjectConfiguration = () => {
                   }`}
                 onClick={() => setActiveIndex(index)}
               >
-                <h3 className="text-3xl sm:text-4xl font-serif text-gray-800 mb-3">
+                <h3 className="text-[42px] font-serif text-gray-800 mb-3">
                   {config.title}
                 </h3>
 
@@ -185,14 +186,15 @@ const ProjectConfiguration = () => {
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.4 }}
                     >
-                      <p className="text-sm text-gray-600 mb-5">
+                      <p className="text-[21px] text-gray-600 mb-5" style={{ fontWeight: "400", lineHeight: "28px" }}>
                         {config.area}
                       </p>
 
                       <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="px-4 py-2 bg-[#BF843D] text-white text-sm font-medium tracking-wide"
+                        className="px-4 py-2 bg-[#BF843D] text-white text-[16px] font-normal tracking-wide"
+                        style={{ fontWeight: "400", lineHeight: "24px" }}
                       >
                         Know More
                       </motion.button>

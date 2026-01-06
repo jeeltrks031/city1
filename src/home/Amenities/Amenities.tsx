@@ -95,8 +95,9 @@ const Amenities = () => {
 
   return (
     <section className=" bg-white overflow-hidden">
-      <div className="max-w-6xl mx-auto py-16 md:py-20 px-4">
-        <h2 className="text-4xl md:text-5xl lg:text-[49px] font-serif text-[#bf843d] text-center mb-16 animate-fadeInDown">
+      <div className="max-w-6xl mx-auto py-16 px-4">
+        <h2 className="text-[48px] font-serif text-[#bf843d] text-center mb-8 animate-fadeInDown"
+          style={{ fontWeight: "400" }}>
           Amenities
         </h2>
 
@@ -141,7 +142,7 @@ const Amenities = () => {
                     </div>
                   </div>
 
-                  <h3 className="text-center text-gray-800 text-base md:text-lg font-medium leading-snug px-2 transition-colors group-hover:text-[#BF843D]">
+                  <h3 className="text-center text-gray-800 text-base md:text-[21px] font-medium leading-snug px-2 transition-colors group-hover:text-[#BF843D]" style={{ fontWeight: "500" }}>
                     {amenity.title}
                   </h3>
 
