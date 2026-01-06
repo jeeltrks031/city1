@@ -312,14 +312,12 @@ const galleryData: GalleryData = {
   ],
   Exterior: [
     "https://api.city1.co.in/uploads/1bhk_20ff5a10d2.png",
-    "https://api.city1.co.in/uploads/2bhk_a389be76d9.png",
   ],
   "Floor Plan": [
     "https://api.city1.co.in/uploads/1bhk_20ff5a10d2.png",
     "https://api.city1.co.in/uploads/2bhk_a389be76d9.png",
   ],
   Walkthrough: [
-    "https://api.city1.co.in/uploads/1bhk_20ff5a10d2.png",
     "https://api.city1.co.in/uploads/2bhk_a389be76d9.png",
   ],
 };
