@@ -344,7 +344,7 @@ const Gallery = () => {
 
   const prevImage = () => {
     if (activeIndex === null) return;
-    setActiveIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+    setActiveIndex((prev) => (prev! === 0 ? images.length - 1 : prev! - 1));
   };
 
   return (
@@ -403,13 +403,13 @@ const Gallery = () => {
             <>
               <button
                 onClick={prevMobile}
-                className="absolute left-4 top-1/2 -translate-y-1/2 text-white"
+                className="absolute cursor-pointer left-4 top-1/2 -translate-y-1/2 text-white"
               >
                 <ChevronLeft size={32} />
               </button>
               <button
                 onClick={nextMobile}
-                className="absolute right-4 top-1/2 -translate-y-1/2 text-white"
+                className="absolute cursor-pointer right-4 top-1/2 -translate-y-1/2 text-white"
               >
                 <ChevronRight size={32} />
               </button>
@@ -454,12 +454,12 @@ const Gallery = () => {
           >
             <button
               onClick={() => setActiveIndex(null)}
-              className="absolute top-6 right-6 text-white"
+              className="absolute cursor-pointer top-6 right-6 text-white"
             >
               <X size={28} />
             </button>
 
-            <button onClick={prevImage} className="absolute left-6 text-white">
+            <button onClick={prevImage} className="absolute cursor-pointer left-6 text-white">
               <ChevronLeft size={40} />
             </button>
 
@@ -472,7 +472,7 @@ const Gallery = () => {
               className="max-h-[85vh] max-w-[90vw] object-contain"
             />
 
-            <button onClick={nextImage} className="absolute right-6 text-white">
+            <button onClick={nextImage} className="absolute cursor-pointer right-6 text-white">
               <ChevronRight size={40} />
             </button>
           </motion.div>
