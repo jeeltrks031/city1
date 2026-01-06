@@ -1,70 +1,3 @@
-// import React from "react";
-// import Image from "next/image";
-// import sideImg from "../../assest/Featured_Image_754c864e70.webp";
-
-// const About = () => {
-//   const stats = [
-//     { number: "57", label: "Limited Edition Suites" },
-//     { number: "20", label: "Storey Grand Colossal Tower In Pradhikaran" },
-//     { number: "3", label: "Suites Per Floor" },
-//     { number: "1+", label: "Private Elevators For Every Suite" },
-//     { number: "3", label: "Side Open Views Of Suites" },
-//     { number: "270", label: "Degree Views In Every Suite" },
-//   ];
-
-//   return (
-//     <section className="bg-white">
-//       <div className="max-w-6xl mx-auto py-16 px-4 md:px-8 lg:px-16">
-//         <div className="flex flex-col lg:flex-row gap-12">
-//           <div className="w-full lg:w-full">
-//             <h2 className="text-4xl md:text-5xl font-bold text-amber-800 mb-6">
-//               About Panache
-//             </h2>
-//             <p className="text-gray-700 text-sm mb-12 leading-relaxed">
-//               A New Face Of Luxury In Pradhikaran Is Here To Change History. An
-//               Ultra-Luxurious Project Of 3 & 4 BHK Sky Suites, This Glamorous
-//               Living Will Let You Experience The Grandeur Like Never Before.
-//               With Stunning 270-Degree Open Views And 3-Side Open Suites, This
-//               Grand Colossal Tower In Pradhikaran Is A Landmark Of Luxury: The
-//               Dramatic Interiors, Star-Studded Facilities, And Exquisite
-//               Amenities Spell Of Grandiose. Live A Life Of Extravagance In
-//               Pradhikaran!
-//             </p>
-
-//             <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-//               {stats.map((stat, index) => (
-//                 <div
-//                   key={index}
-//                   className="p-4 text-center border border-gray-200 rounded-lg"
-//                 >
-//                   <p className="text-3xl md:text-4xl font-bold text-amber-800 mb-2">
-//                     {stat.number}
-//                   </p>
-//                   <p className="text-sm text-gray-600">{stat.label}</p>
-//                 </div>
-//               ))}
-//             </div>
-//           </div>
-
-//           <div className="lg:w-1/2 h-96 lg:h-auto relative">
-//             <div className="w-[100%] h-[100%] relative rounded-lg overflow-hidden">
-//               <Image
-//                 src={sideImg.src}
-//                 alt="Panache Luxury Building"
-//                 layout="fill"
-//                 objectFit="cover"
-//                 className="rounded-lg"
-//               />
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default About;
-
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import sideImg from "../../assest/Featured_Image_754c864e70.webp";
@@ -110,7 +43,7 @@ const About = () => {
             </h2>
 
             <p
-              className="text-gray-700 text-[13px] max-w-6xl mb-6"
+              className="text-gray-700 text-[13px] max-w-6xl mb-3"
               style={{ letterSpacing: "0.5px", lineHeight: "18px", fontWeight: "400" }}
             >
               A New Face Of Luxury In Pradhikaran Is Here To Change History. An
@@ -131,29 +64,39 @@ const About = () => {
                   className="relative pl-6 animate-fade-up"
                   style={{ animationDelay: `${index * 120}ms` }}
                 >
-                  <span className="absolute left-0 top-0 h-full w-[2px] bg-[#BF843D]" />
+
                   <CountUp
                     value={stat.number}
                     suffix={stat.suffix}
                     start={startCount}
                   />
 
-                  <p className="text-sm text-gray-700 max-w-[200px] mt-2">
+                  <p className="text-[sm] text-gray-700 max-w-[200px]">
                     {stat.label}
                   </p>
+
                 </div>
               ))}
             </div>
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="w-[100%] md:w-[50%] relative sm:h-[auto] lg:h-[auto] animate-fade-right">
+          {/* <div className="w-[100%] md:w-[50%] relative sm:h-[auto] lg:h-[auto] animate-fade-right">
             <img
               src={sideImg.src}
               alt="Panache Luxury Building"
               // fill
               // priority
               className="object-cover rounded-sm shadow-xl"
+            />
+          </div> */}
+
+          {/* RIGHT IMAGE */}
+          <div className="w-full md:w-1/2 relative h-[400px] md:h-[400px] lg:mt-10 animate-fade-right">
+            <img
+              src={sideImg.src}
+              alt="Panache Luxury Building"
+              className="w-full h-full object-cover rounded-sm shadow-xl"
             />
           </div>
         </div>

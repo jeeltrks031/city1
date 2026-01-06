@@ -65,7 +65,7 @@ const Location = () => {
   const [active, setActive] = useState<number>(0);
 
   return (
-    <section className="bg-white py-20">
+    <section className=" py-20" style={{ background: "linear-gradient(180deg,#fff -1%,hsla(0,0%,100%,0) 36.54%,#fff 74.47%),url(webpack:///mini-css-extract-plugin/_next/static/media/bg.dcc56c30.png) #d3d3d3 -182.857px 0 /140.101% 75.655% no-repeat" }}>
       <div className="max-w-6xl mx-auto px-4 lg:px-16">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -78,7 +78,7 @@ const Location = () => {
           Location Advantages
         </motion.h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-15">
           <div className="w-full h-[400px] lg:h-[100%] rounded-lg overflow-hidden shadow-md">
             <iframe
               src="https://www.google.com/maps?q=City%20One%20Panache&output=embed"
@@ -109,7 +109,7 @@ const Location = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="overflow-hidden border-b border-gray-200"
+                  className="overflow-hidden border-b border-black"
                 >
                   <button
                     onClick={() => setActive(active === index ? -1 : index)}

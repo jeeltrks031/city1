@@ -99,7 +99,7 @@ const Hero = () => {
         className={`fixed top-0 w-full z-50 transition-colors duration-300 ${isScrolled ? "bg-black" : "bg-transparent"
           }`}
       >
-        <div className="max-w-6xl container mx-auto px-4 lg:px-8">
+        <div className="max-w-7xl container mx-auto px-4 lg:px-20">
           <div className="flex items-center justify-between h-15">
             <img src={logo.src} alt="Logo" className="h-10" />
             <button
@@ -157,7 +157,6 @@ const Hero = () => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.6, ease: "easeInOut" }}
-              style={{ opacity: 0.5 }}
               className="fixed top-0 right-0 w-full sm:w-[300px] h-full z-50 bg-gradient-to-b from-[#0b1623] to-[#05080d] text-white px-10 py-10"
             >
               <button
