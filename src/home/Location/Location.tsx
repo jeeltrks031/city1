@@ -65,14 +65,20 @@ const Location = () => {
   const [active, setActive] = useState<number>(0);
 
   return (
-    <section className=" py-20" style={{ background: "linear-gradient(180deg,#fff -1%,hsla(0,0%,100%,0) 36.54%,#fff 74.47%),url(webpack:///mini-css-extract-plugin/_next/static/media/bg.dcc56c30.png) #d3d3d3 -182.857px 0 /140.101% 75.655% no-repeat" }}>
+    <section
+      className=" py-20"
+      style={{
+        background:
+          "linear-gradient(180deg,#fff -1%,hsla(0,0%,100%,0) 36.54%,#fff 74.47%),url(webpack:///mini-css-extract-plugin/_next/static/media/bg.dcc56c30.png) #d3d3d3 -182.857px 0 /140.101% 75.655% no-repeat",
+      }}
+    >
       <div className="max-w-6xl mx-auto px-4 lg:px-16">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-[49px] text-[#BF843D] mb-10"
+          className="lg:text-[49px] text-[30px] text-[#BF843D] mb-10 text-center lg:text-left"
           style={{ fontWeight: "400" }}
         >
           Location Advantages
@@ -96,8 +102,10 @@ const Location = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="order-1 lg:order-2"
           >
-            <h3 className="text-[40px] font-serif text-gray-900 mb-3"
-              style={{ fontWeight: "400", lineHeight: "55px" }}>
+            <h3
+              className="text-[36px] lg:text-[40px] text-center lg:text-left font-serif text-gray-900 mb-3"
+              style={{ fontWeight: "400", lineHeight: "55px" }}
+            >
               Connectivity
             </h3>
 
@@ -116,7 +124,10 @@ const Location = () => {
                     className={`w-full cursor-pointer flex justify-between items-center py-2 text-left transition ${active === index ? "" : ""
                       }`}
                   >
-                    <span className="text-[21px] text-[#333]" style={{ fontWeight: "400", lineHeight: "31px" }}>
+                    <span
+                      className="text-[21px] text-[#333]"
+                      style={{ fontWeight: "400", lineHeight: "31px" }}
+                    >
                       {section.title}
                     </span>
                     <ChevronDown
@@ -136,9 +147,20 @@ const Location = () => {
                       >
                         <div className="flex items-center gap-2">
                           <MapPin size={14} />
-                          <span className="text-[17px]" style={{ fontWeight: "400" }}> {item.name}</span>
+                          <span
+                            className="text-[17px]"
+                            style={{ fontWeight: "400" }}
+                          >
+                            {" "}
+                            {item.name}
+                          </span>
                         </div>
-                        <span className="text-[17px]" style={{ fontWeight: "400" }}>{item.distance}</span>
+                        <span
+                          className="text-[17px]"
+                          style={{ fontWeight: "400" }}
+                        >
+                          {item.distance}
+                        </span>
                       </div>
                     ))}
                   </div>

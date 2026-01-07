@@ -34,7 +34,7 @@ const ProjectConfiguration = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center text-[49px] text-[#BF843D] mb-16"
+            className="text-center text-[36px] lg:text-[49px] text-[#BF843D] mb-16"
             style={{ fontWeight: "400" }}
           >
             Project Configuration
@@ -61,11 +61,11 @@ const ProjectConfiguration = () => {
                     hidden: { opacity: 0, x: -30 },
                     visible: { opacity: 1, x: 0 },
                   }}
-                  className={`cursor-pointer transition-all duration-300 ${activeIndex === index ? "opacity-100" : "opacity-50"
+                  className={`cursor-pointer text-center lg:text-left transition-all duration-300 ${activeIndex === index ? "opacity-100" : "opacity-50"
                     }`}
                   onClick={() => setActiveIndex(index)}
                 >
-                  <h3 className="text-[42px] font-serif text-gray-800 mb-3">
+                  <h3 className="text-[42px] font-serif text-gray-800 mb-3 text-center lg:text-left">
                     {config.title}
                   </h3>
 
@@ -77,7 +77,7 @@ const ProjectConfiguration = () => {
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.4 }}
                       >
-                        <p className="text-[21px] text-gray-600 mb-5" style={{ fontWeight: "400", lineHeight: "28px" }}>
+                        <p className="text-[21px] text-gray-600 mb-5 text-center lg:text-left" style={{ fontWeight: "400", lineHeight: "28px" }}>
                           {config.area}
                         </p>
 

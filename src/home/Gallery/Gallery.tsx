@@ -310,16 +310,12 @@ const galleryData: GalleryData = {
     "https://api.city1.co.in/uploads/1bhk_20ff5a10d2.png",
     "https://api.city1.co.in/uploads/2bhk_a389be76d9.png",
   ],
-  Exterior: [
-    "https://api.city1.co.in/uploads/1bhk_20ff5a10d2.png",
-  ],
+  Exterior: ["https://api.city1.co.in/uploads/1bhk_20ff5a10d2.png"],
   "Floor Plan": [
     "https://api.city1.co.in/uploads/1bhk_20ff5a10d2.png",
     "https://api.city1.co.in/uploads/2bhk_a389be76d9.png",
   ],
-  Walkthrough: [
-    "https://api.city1.co.in/uploads/2bhk_a389be76d9.png",
-  ],
+  Walkthrough: ["https://api.city1.co.in/uploads/2bhk_a389be76d9.png"],
 };
 
 const tabs = Object.keys(galleryData);
@@ -353,13 +349,13 @@ const Gallery = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-[49px] font-serif text-[#BF843D] mb-8"
+          className="text-[49px] font-serif text-[#BF843D] mb-8 text-center lg:text-left"
         >
           Gallery
         </motion.h2>
 
         {/* TABS */}
-        <div className="flex gap-10 mb-10 border-b border-gray-200">
+        <div className="flex justify-center lg:justify-start gap-10 mb-10 border-b border-gray-200">
           {tabs.map((tab) => (
             <button
               key={tab}
@@ -367,10 +363,11 @@ const Gallery = () => {
                 setActiveTab(tab);
                 setMobileIndex(0);
               }}
-              className={`pb-3 cursor-pointer text-[20px] relative ${activeTab === tab
-                ? "text-[#BF843D] font-medium"
-                : "text-[#BF843D]"
-                }`}
+              className={`pb-3 cursor-pointer text-[18px] md:text-[20px] relative ${
+                activeTab === tab
+                  ? "text-[#BF843D] font-medium"
+                  : "text-[#BF843D]"
+              }`}
               style={{ fontWeight: activeTab === tab ? "bold" : "normal" }}
             >
               {tab}
@@ -457,7 +454,10 @@ const Gallery = () => {
               <X size={28} />
             </button>
 
-            <button onClick={prevImage} className="absolute cursor-pointer left-6 text-white">
+            <button
+              onClick={prevImage}
+              className="absolute cursor-pointer left-6 text-white"
+            >
               <ChevronLeft size={40} />
             </button>
 
@@ -470,7 +470,10 @@ const Gallery = () => {
               className="max-h-[85vh] max-w-[90vw] object-contain"
             />
 
-            <button onClick={nextImage} className="absolute cursor-pointer right-6 text-white">
+            <button
+              onClick={nextImage}
+              className="absolute cursor-pointer right-6 text-white"
+            >
               <ChevronRight size={40} />
             </button>
           </motion.div>

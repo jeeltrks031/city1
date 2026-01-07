@@ -39,7 +39,7 @@ const About = () => {
         <div className="flex md:flex-row flex-col gap-14 items-center">
           <div className="animate-fade-left">
             <h2
-              className="text-[49px] text-[#BF843D] mb-3"
+              className="text-[49px] text-[#BF843D] text-center lg:text-left mb-3"
               style={{ fontWeight: "500" }}
             >
               About Panache
@@ -64,30 +64,7 @@ const About = () => {
             </p>
 
             {/* STATS */}
-            {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-5 gap-x-10 md:text-center">
-              {stats.map((stat, index) => (
-                <div
-                  key={index}
-                  className="relative pl-6 animate-fade-up"
-                  style={{ animationDelay: `${index * 120}ms` }}
-                >
-
-                  <CountUp
-                    value={stat.number}
-                    suffix={stat.suffix}
-                    start={startCount}
-                  />
-
-                  <p className="text-[sm] text-gray-700 max-w-[200px]">
-                    {stat.label}
-                  </p>
-
-                </div>
-              ))}
-            </div> */}
-
-            {/* STATS */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-10 md:text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-10 md:text-center text-center">
               {stats.map((stat, index) => (
                 <div
                   key={index}
@@ -104,7 +81,7 @@ const About = () => {
                     start={startCount}
                   />
 
-                  <p className="text-[sm] text-gray-700 max-w-[200px]">
+                  <p className="text-[sm] text-gray-700 max-w-full lg:max-w-[200px] text-center lg:text-center">
                     {stat.label}
                   </p>
                 </div>

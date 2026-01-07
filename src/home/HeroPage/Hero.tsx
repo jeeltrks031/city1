@@ -63,6 +63,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import heroImg from "../../assest/Desktop_Banner_c72f6992d9.webp";
+import heroImgMobile from "../../assest/Featured_Image_754c864e70.webp";
 import logo from "../../assest/logo.svg";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Menu, X } from "lucide-react";
@@ -116,8 +117,23 @@ const Hero = () => {
         id="home"
         className="relative min-h-screen flex items-center justify-center overflow-hidden"
       >
-        <div className="absolute inset-0">
+        {/* <div className="absolute inset-0">
           <img src={heroImg.src} alt="" className="w-full h-full" />
+        </div> */}
+        <div className="absolute inset-0">
+          {/* Mobile/Tablet Image */}
+          <img
+            src={heroImgMobile.src}
+            alt="City One Mobile View"
+            className="w-full h-full object-cover md:hidden"
+          />
+
+          {/* Desktop Image */}
+          <img
+            src={heroImg.src}
+            alt="City One Desktop View"
+            className="hidden md:block w-full h-full"
+          />
         </div>
         <div className="absolute inset-0 bg-black/30" />
 
