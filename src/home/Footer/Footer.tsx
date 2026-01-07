@@ -1,10 +1,15 @@
 "use client";
+import { log } from "console";
 import { motion } from "framer-motion";
+import logo from "../../assest/logo.svg";
 
 const Footer = () => {
   return (
     <footer className="bg-[#F8F7F3]">
-      <div className="max-w-6xl mx-auto px-6 py-14">
+      <div className="flex justify-center">
+        <img src={logo.src} alt="" className="h-13 mt-10" />
+      </div>
+      <div className="max-w-6xl mx-auto px-6 py-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -50,19 +55,25 @@ const Footer = () => {
           </h4>
           <h3 className="font-serif text-2xl mb-3">HEAD OFFICE</h3>
           <p className="text-sm leading-6 mb-6">
-            Adjoining the Pune-Bengaluru Highway,<br />
+            Adjoining the Pune-Bengaluru Highway,
+            <br />
             Ravet, Pune – 412101
           </p>
 
-          <h4 className="text-[#c58a3d] font-serif text-lg mb-2">
-            CONTACT US
-          </h4>
+          <h4 className="text-[#c58a3d] font-serif text-lg mb-2">CONTACT US</h4>
           <p className="text-sm">✉ sales@city1.co.in</p>
         </motion.div>
 
         <FooterColumn
           title="QUICK LINKS"
-          items={["Home", "About Us", "Projects", "Blogs", "Contact Us", "EMI Calculator"]}
+          items={[
+            "Home",
+            "About Us",
+            "Projects",
+            "Blogs",
+            "Contact Us",
+            "EMI Calculator",
+          ]}
         />
 
         <FooterColumn
@@ -70,10 +81,7 @@ const Footer = () => {
           items={["Careers", "Privacy Policy"]}
         />
 
-        <FooterColumn
-          title="MEDIA"
-          items={["News / PR", "Media"]}
-        />
+        <FooterColumn title="MEDIA" items={["News / PR", "Media"]} />
 
         <FooterColumn
           title="TYPOLOGY"
@@ -88,7 +96,7 @@ const Footer = () => {
         />
       </div>
 
-      <div className="text-center text-sm text-gray-500 py-6 mt-10">
+      <div className="text-center text-sm text-gray-500 mt-10">
         © {new Date().getFullYear()} City One. All Rights Reserved.
       </div>
     </footer>
@@ -97,13 +105,7 @@ const Footer = () => {
 
 export default Footer;
 
-const FooterColumn = ({
-  title,
-  items,
-}: {
-  title: string;
-  items: string[];
-}) => {
+const FooterColumn = ({ title, items }: { title: string; items: string[] }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
