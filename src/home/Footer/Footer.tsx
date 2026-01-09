@@ -15,7 +15,7 @@ const Footer = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 items-center"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-center"
         >
           <input
             placeholder="Full Name"
@@ -29,11 +29,6 @@ const Footer = () => {
             placeholder="Email Address"
             className="bg-black text-[17px] text-white px-4 py-4 outline-none"
           />
-          <select className="bg-black cursor-pointer text-[17px] text-white px-4 py-4 outline-none">
-            <option>Select a Project</option>
-            <option>City One</option>
-            <option>City Two</option>
-          </select>
           <button
             className="bg-[#c58a3d] text-[16px] text-white py-4 font-medium hover:bg-[#b07835] transition"
             style={{ fontWeight: "700" }}
