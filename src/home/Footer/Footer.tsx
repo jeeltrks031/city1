@@ -2,8 +2,60 @@
 import { log } from "console";
 import { motion } from "framer-motion";
 import logo from "../../assest/logo.svg";
+import { useState } from "react";
+
+const GOOGLE_SHEET_URL =
+  "https://script.google.com/macros/s/AKfycbxNYVijUHQAreTjfdDuuTmMWeJ2yeW117h9jwf8uSMiDEB8HzrOmn5id9vefGJQCaRpDg/exec";
 
 const Footer = () => {
+
+  const [formData, setFormData] = useState({
+    fullName: "",
+    mobile: "",
+    email: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async () => {
+    if (!formData.fullName || !formData.email) {
+      alert("Please fill required fields");
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const form = new FormData();
+      form.append("firstName", formData.fullName);
+      form.append("lastName", "");
+      form.append("email", formData.email);
+      form.append("phone", formData.mobile);
+      form.append("project_id", "prosperbrooklyn");
+
+      await fetch(GOOGLE_SHEET_URL, {
+        method: "POST",
+        body: form,
+      });
+
+      alert("Thank you! We will contact you soon.");
+
+      setFormData({
+        fullName: "",
+        mobile: "",
+        email: "",
+      });
+    } catch (error) {
+      alert("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <footer className="bg-[#F8F7F3]">
       <div className="flex justify-center">
@@ -18,22 +70,33 @@ const Footer = () => {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-center"
         >
           <input
+            name="fullName"
             placeholder="Full Name"
+            value={formData.fullName}
+            onChange={handleChange}
             className="bg-black text-[17px] text-white px-4 py-4 outline-none"
           />
           <input
+            name="mobile"
             placeholder="Mobile Number"
+            value={formData.mobile}
+            onChange={handleChange}
             className="bg-black text-[17px] text-white px-4 py-4 outline-none"
           />
           <input
+            name="email"
             placeholder="Email Address"
+            value={formData.email}
+            onChange={handleChange}
             className="bg-black text-[17px] text-white px-4 py-4 outline-none"
           />
           <button
-            className="bg-[#c58a3d] text-[16px] text-white py-4 font-medium hover:bg-[#b07835] transition"
+            onClick={handleSubmit}
+            disabled={loading}
+            className="bg-[#c58a3d] cursor-pointer text-[16px] text-white py-4 font-medium hover:bg-[#b07835] transition"
             style={{ fontWeight: "700" }}
           >
-            Submit
+            {loading ? "Submitting..." : "Submit"}
           </button>
         </motion.div>
       </div>
